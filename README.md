@@ -1,4 +1,4 @@
-# Migrations Squash CLI Tool for Entity Framework (EF) Core
+# Entity Framework Migrations Squash CLI Tool
 
 ## Overview
 
@@ -37,7 +37,7 @@ Its purpose is to **squash multiple EF Core migrations into a single migration f
 dotnet tool install --global DotnetEfMigrationsSquash
 ```
 
-### Example Workflow
+### Example Usage
 
 ```bash
 dotnet-ef-migrations-squash --project .\path\to\migrations\project --startup-project .\path\to\startup\project 
