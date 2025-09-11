@@ -7,15 +7,11 @@ Its purpose is to **squash multiple EF Core migrations into a single migration f
 
 **Important:** While this tool exists, **squashing migrations is not a recommended practice** in most cases. It should only be considered if you fully understand the risks outlined below.
 
----
-
 ## Recommended actions before using the  tool
 
 * Always **apply all pending migrations** to every environment **before** attempting to squash.
 * Prefer keeping the migration history intact - database migrations are lightweight, and EF Core can handle a large number of them.
 * Consider squashing **only when** you have an excessively long migration history (hundreds+) and you fully control all environments.
-
----
 
 ## How the Tool Works
 
@@ -32,8 +28,6 @@ Its purpose is to **squash multiple EF Core migrations into a single migration f
 
 4. **Re-creates the Initial Migration**
    - Initial migration is overriden, containing the entire schema definition.
-
----
 
 ## Quick Start
 
@@ -54,9 +48,6 @@ dotnet-ef-migrations-squash --project .\path\to\migrations\project --startup-pro
 * Generates an **EF Core bundle** for safe rollback and migration management.
 * Deletes all migration files.
 * Recreates the **Initial migration** that now includes all previous migrations.
-
-
----
 
 ## Notes
 
