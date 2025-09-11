@@ -16,6 +16,8 @@
 		</Description>
 		<PackageProjectUrl>https://github.com/asimeonov/EfCoreSquashCliTool</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/asimeonov/EfCoreSquashCliTool</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -24,7 +26,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="nupkg\" />
+		<Folder Include="nupkg\" />
+		<None Include="..\readme.md" Pack="true" PackagePath="\"/>
 	</ItemGroup>
-
 </Project>
