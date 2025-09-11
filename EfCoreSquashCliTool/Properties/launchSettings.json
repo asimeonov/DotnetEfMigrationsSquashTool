@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "EfCoreSqwashCliTool": {
+      "commandName": "Project",
+      "commandLineArgs": "--startup-project C:\\development\\loyalty-c\\src\\Loyalty.Api\\ --project C:\\development\\loyalty-c\\src\\Loyalty.Persistence\\"
+    }
+  }
+}

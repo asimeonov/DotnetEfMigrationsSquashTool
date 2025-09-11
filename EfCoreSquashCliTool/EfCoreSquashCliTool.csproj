@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackAsTool>true</PackAsTool>
+		<ToolCommandName>dotnet-ef-migrations-squash</ToolCommandName>
+		<PackageOutputPath>./nupkg</PackageOutputPath>
+		<Version>1.0.0</Version>
+		<Authors>Atanas Simeonov</Authors>
+		<Company>Atanas Simeonov</Company>
+		<Description>
+			The Migrations Squash CLI Tool is a helper utility built on top of the official Entity Framework Core CLI tool. Its purpose is to squash multiple EF Core migrations into a single migration file when projects accumulate a large migration history.
+		</Description>
+		<PackageProjectUrl>https://github.com/asimeonov/EfCoreSquashCliTool</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/asimeonov/EfCoreSquashCliTool</RepositoryUrl>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" />
+		<PackageReference Include="System.CommandLine" Version="2.0.0-beta7.25380.108" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="nupkg\" />
+	</ItemGroup>
+
+</Project>
