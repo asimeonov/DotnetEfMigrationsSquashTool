@@ -5,7 +5,7 @@
 The **Migrations Squash CLI Tool** is a helper utility built on top of the official **Entity Framework Core CLI tool**.
 Its purpose is to **squash multiple EF Core migrations into a single migration file** when projects accumulate a large migration history.
 
-⚠️ **Important:** While this tool exists, **squashing migrations is not a recommended practice** in most cases. It should only be considered if you fully understand the risks outlined below.
+**Important:** While this tool exists, **squashing migrations is not a recommended practice** in most cases. It should only be considered if you fully understand the risks outlined below.
 
 ---
 
