@@ -1,6 +1,6 @@
 ﻿using System.CommandLine;
 
-namespace EfCoreSqwashCliTool;
+namespace DotnetEfMigrationsSquash;
 
 public record CommandOptions(
     Option<bool> JsonOption,

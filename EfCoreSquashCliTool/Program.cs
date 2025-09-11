@@ -4,7 +4,7 @@ using System.CommandLine.Parsing;
 using System.Diagnostics;
 using System.Globalization;
 using System.Text.RegularExpressions;
-using EfCoreSqwashCliTool;
+using DotnetEfMigrationsSquash;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
