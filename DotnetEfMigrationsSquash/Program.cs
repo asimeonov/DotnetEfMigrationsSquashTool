@@ -12,7 +12,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 internal class Program
 {
     private const string Format = "yyyyMMddHHmmss";
-            
+
     private static DateTime _lastTimestamp = DateTime.MinValue;
     private static readonly object _lock = new();
 
@@ -141,13 +141,13 @@ internal class Program
 
             if (proc.ExitCode != 0)
             {
-                Console.ForegroundColor = ConsoleColor.Red;                
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.Error.WriteLine("dotnet-ef migrations bundle failed.");
                 return 1;
             }
 
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("The floowing actions will remove all axisting migrations and will recreate the intial migration.");
+            Console.WriteLine("The following actions will remove all existing migrations and will recreate the initial migration.");
             Console.WriteLine("Are you sure you want to continue?");
             Console.WriteLine("Press Y to continue or any other key to exit.");
 
@@ -157,7 +157,7 @@ internal class Program
             {
                 Console.WriteLine("Exiting.");
                 return 0;
-            }            
+            }
             Console.ResetColor();
 
             Console.WriteLine("Cleaning up migration files.");
@@ -193,14 +193,14 @@ internal class Program
             await proc.WaitForExitAsync();
             Console.WriteLine(output);
 
-            if(proc.ExitCode != 0)
+            if (proc.ExitCode != 0)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Error.WriteLine("dotnet-ef migrations add failed.");
                 return 1;
             }
 
-            Console.WriteLine($"Recreating Intial Migration file by renaming '{regeneratedInitialMigrationName}' file that was generated with '{initialMigrationFileName}'.");
+            Console.WriteLine($"Recreating Initial Migration file by renaming '{regeneratedInitialMigrationName}' file that was generated with '{initialMigrationFileName}'.");
 
             di.GetFiles()
                 .Where(fi => fi.Name.Contains(regeneratedInitialMigrationName, StringComparison.InvariantCultureIgnoreCase)).ToList()
@@ -245,7 +245,7 @@ internal class Program
                 });
 
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Squash operation completed succesfully.");
+            Console.WriteLine("Squash operation completed successfully.");
 
             return 0;
         }
@@ -264,7 +264,7 @@ internal class Program
     private static RootCommand CreateRootCommand(CommandOptions commandOptions)
     {
         RootCommand rootCommand = new("Sample app for System.CommandLine");
-        
+
         rootCommand.Options.Add(commandOptions.JsonOption);
         rootCommand.Options.Add(commandOptions.ProjectOption);
         rootCommand.Options.Add(commandOptions.OutputDirOption);
