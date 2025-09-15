@@ -82,8 +82,8 @@ If something goes wrong during the squashing process:
 * This tool is for **advanced scenarios only**.
 * **Do not squash migrations** unless absolutely necessary.
 * Always ensure **all environments** (local, staging, production, CI/CD) are fully migrated to the **latest version** before running the tool.
-* The `__EFMigrationsHistory` table in your database will **NOT** be updated after the new single migration is created. Because the initial migration is overriten.
-* Backup files are saved in your project's `Migrations` folder with timestamps.
+* The `__EFMigrationsHistory` table in your database will **NOT** be updated after the new single migration is created. Initial migration is overwritten, and no changes are required.
+* Backup files are saved in your project's `Migrations` folder with timestamps.  All migrations before the squash operation can be applied from the backup bundle. 
 
 ## License
 
